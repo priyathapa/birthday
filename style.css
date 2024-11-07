@@ -1,0 +1,126 @@
+* {
+    background-color: lightskyblue; /* Removed extra semicolon */
+  }
+  
+  .van{
+    display:flex;
+    justify-content: left;
+    margin-top: 25%;
+  }
+  .vanTop{
+    height: 20px;
+    width: 30px;
+    border: 2px solid rgb(245, 218, 243);
+    background-color: rgb(245, 218, 243);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 5px;
+    position: relative;
+    left:9rem;
+    top:0.5rem;
+  }
+  
+  .vanGlass{
+    height: 10px;
+    width: 17px;
+    border: 1px solid rgb(236, 223, 223);
+    background-color: orchid;
+    border-top-right-radius: 5px;
+    position: relative;
+    left:7.3rem;
+    top: 1rem;
+  }
+  .vanFront{
+    height: 18px;
+    width: 35px;
+    border: 2px solid rgb(245, 218, 243); 
+    border-top-right-radius: 4px;
+    background-color: rgb(245, 218, 243);
+  
+    position: relative;
+    top:2rem;
+    left:5.7rem;
+  }
+  
+  .vanStorage {
+    height: 50px; 
+    width: 90px; 
+    border: 2px solid rgb(245, 218, 243); 
+    background-color: rgb(245, 218, 243);
+  
+    position: relative;
+    left:8.8rem;
+  }
+  
+  .vanBottom{
+    height: 2.5px;
+    width: 140px;
+    border-radius: 3px;
+    border: 1px solid black;
+    background-color: black;
+    position:relative;
+    top: 3.4rem;
+    right:3rem;
+  }
+  
+  .wheel1, .wheel2, .wheel3{
+    height: 18px;
+    width: 18px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: black;
+  }
+  
+    .wheel1{
+      position: relative;
+      right:7.5rem;
+      top: 3rem;
+    }
+  
+    .wheel2{
+      position: relative;
+      top:3rem;
+      right:5.7rem;
+    }
+  
+    .wheel3{
+      position: relative;
+      top:3rem;
+      right:13.5rem;
+    }
+  
+  .miniwheel1, .miniwheel2, .miniwheel3{
+    height: 7px;
+    width: 7px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: aliceblue;
+    position: relative;
+    top: 0.1875rem;
+    left: 0.1875rem;
+    z-index: 1;
+  }
+  
+  .animated-div {
+  
+    position: relative;
+    animation: move 5s infinite alternate; /* Animation on loop */
+  }
+  
+  @keyframes move {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(400px); /* Move to the right */
+    }
+  }
+  
+  .envelopeWrapper{
+    display: flex;
+    justify-content: center;
+  }
+
+  .envelope{
+    height: 100px;
+    width:100px;
+  }
