@@ -67,7 +67,7 @@
     width: 18px;
     border-radius: 10px;
     border: 1px solid black;
-    background-color: black;
+    background-color: rgb(44, 43, 43);
   }
   
     .wheel1{
@@ -93,7 +93,7 @@
     width: 7px;
     border-radius: 5px;
     border: 2px solid white;
-    background-color: aliceblue;
+    background-color: rgb(150, 153, 156);
     position: relative;
     top: 0.1875rem;
     left: 0.1875rem;
@@ -101,26 +101,18 @@
   }
   
   .animated-div {
-  
     position: relative;
-    animation: move 5s infinite alternate; /* Animation on loop */
+    animation: move 4s forwards; /* Animation on loop */
   }
   
   @keyframes move {
     from {
         transform: translateX(0);
+
     }
     to {
-        transform: translateX(400px); /* Move to the right */
+        transform: translateX(600px); 
+
     }
   }
   
-  .envelopeWrapper{
-    display: flex;
-    justify-content: center;
-  }
-
-  .envelope{
-    height: 100px;
-    width:100px;
-  }
