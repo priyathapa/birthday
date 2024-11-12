@@ -12,11 +12,12 @@
     font-style: italic;
     font-weight: 400;
     font-size: xx-large;
-    animation: typeEffect 2s ease-in;
+    animation: typeEffect 5s ease-in;
 }
 
 .secondMessage {
     color: #00D1B2;
+
 }
 
 .envelope {
