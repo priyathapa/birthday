@@ -1,14 +1,18 @@
+*{
+  background-color: #FFFFF0;
 
+}
+  
+  
   .van{
     display:flex;
-    justify-content: left;
     margin-top: 25%;
   }
   .vanTop{
     height: 20px;
     width: 30px;
-    border: 2px solid rgb(245, 218, 243);
-    background-color: rgb(245, 218, 243);
+    border: 2px solid #87CEFA;
+    background-color: #87CEFA;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 5px;
     position: relative;
@@ -19,8 +23,8 @@
   .vanGlass{
     height: 10px;
     width: 17px;
-    border: 1px solid rgb(236, 223, 223);
-    background-color: orchid;
+    border: 1px solid #4169E1;
+    background-color: #4fb7da;
     border-top-right-radius: 5px;
     position: relative;
     left:7.3rem;
@@ -29,9 +33,9 @@
   .vanFront{
     height: 18px;
     width: 35px;
-    border: 2px solid rgb(245, 218, 243); 
+    border: 2px solid #87CEFA; 
     border-top-right-radius: 4px;
-    background-color: rgb(245, 218, 243);
+    background-color: #87CEFA;
   
     position: relative;
     top:2rem;
@@ -41,9 +45,8 @@
   .vanStorage {
     height: 50px; 
     width: 90px; 
-    border: 2px solid rgb(245, 218, 243); 
-    background-color: rgb(245, 218, 243);
-  
+    border: 2px solid #87CEFA; 
+    background-color: #87CEFA;
     position: relative;
     left:8.8rem;
   }
@@ -99,7 +102,7 @@
   
   .animated-div {
     position: relative;
-    animation: move 4s forwards; /* Animation on loop */
+    animation: move 4s  ease-in forwards ; /* Animation on loop */
   }
   
   @keyframes move {
@@ -108,7 +111,7 @@
 
     }
     to {
-        transform: translateX(600px); 
+        transform: translateX(20%); 
 
     }
   }
