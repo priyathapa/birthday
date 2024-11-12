@@ -1,118 +1,129 @@
-*{
-  background-color: #FFFFF0;
-
+/* Reset margins and padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
-  
-  
-  .van{
-    display:flex;
-    margin-top: 25%;
-  }
-  .vanTop{
-    height: 20px;
-    width: 30px;
-    border: 2px solid #87CEFA;
-    background-color: #87CEFA;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 5px;
-    position: relative;
-    left:9rem;
-    top:0.5rem;
-  }
-  
-  .vanGlass{
-    height: 10px;
-    width: 17px;
-    border: 1px solid #4169E1;
-    background-color: #4fb7da;
-    border-top-right-radius: 5px;
-    position: relative;
-    left:7.3rem;
-    top: 1rem;
-  }
-  .vanFront{
-    height: 18px;
-    width: 35px;
-    border: 2px solid #87CEFA; 
-    border-top-right-radius: 4px;
-    background-color: #87CEFA;
-  
-    position: relative;
-    top:2rem;
-    left:5.7rem;
-  }
-  
-  .vanStorage {
-    height: 50px; 
-    width: 90px; 
-    border: 2px solid #87CEFA; 
-    background-color: #87CEFA;
-    position: relative;
-    left:8.8rem;
-  }
-  
-  .vanBottom{
-    height: 2.5px;
-    width: 140px;
-    border-radius: 3px;
-    border: 1px solid black;
-    background-color: black;
-    position:relative;
-    top: 3.4rem;
-    right:3rem;
-  }
-  
-  .wheel1, .wheel2, .wheel3{
-    height: 18px;
-    width: 18px;
-    border-radius: 10px;
-    border: 1px solid black;
-    background-color: rgb(44, 43, 43);
-  }
-  
-    .wheel1{
-      position: relative;
-      right:7.5rem;
-      top: 3rem;
-    }
-  
-    .wheel2{
-      position: relative;
-      top:3rem;
-      right:5.7rem;
-    }
-  
-    .wheel3{
-      position: relative;
-      top:3rem;
-      right:13.5rem;
-    }
-  
-  .miniwheel1, .miniwheel2, .miniwheel3{
-    height: 7px;
-    width: 7px;
-    border-radius: 5px;
-    border: 2px solid white;
-    background-color: rgb(150, 153, 156);
-    position: relative;
-    top: 0.1875rem;
-    left: 0.1875rem;
-    z-index: 1;
-  }
-  
-  .animated-div {
-    position: relative;
-    animation: move 4s  ease-in forwards ; /* Animation on loop */
-  }
-  
-  @keyframes move {
-    from {
-        transform: translateX(0);
 
-    }
-    to {
-        transform: translateX(20%); 
+* {
+  background-color: #FFFFF0; /* Ivory background */
+}
 
-    }
+/* Position van absolutely (or fixed) off the right side of the screen */
+.van {
+  display: flex;
+  position: absolute; /* Or 'fixed' if you want it fixed on the screen */
+  right: -150px; /* Start off-screen to the right */
+  top: 25%; /* Adjust the vertical position */
+  z-index: 10; /* Ensure it stays on top of other elements */
+}
+
+/* Van styling */
+.vanTop {
+  height: 20px;
+  width: 30px;
+  border: 2px solid #87CEFA;
+  background-color: #87CEFA;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 5px;
+  position: relative;
+  left: 9rem;
+  top: 0.5rem;
+}
+
+.vanGlass {
+  height: 10px;
+  width: 17px;
+  border: 1px solid #4169E1;
+  background-color: #4fb7da;
+  border-top-right-radius: 5px;
+  position: relative;
+  left: 7.3rem;
+  top: 1rem;
+}
+
+.vanFront {
+  height: 18px;
+  width: 35px;
+  border: 2px solid #87CEFA;
+  border-top-right-radius: 4px;
+  background-color: #87CEFA;
+  position: relative;
+  top: 2rem;
+  left: 5.7rem;
+}
+
+.vanStorage {
+  height: 50px;
+  width: 90px;
+  border: 2px solid #87CEFA;
+  background-color: #87CEFA;
+  position: relative;
+  left: 8.8rem;
+}
+
+.vanBottom {
+  height: 2.5px;
+  width: 140px;
+  border-radius: 3px;
+  border: 1px solid black;
+  background-color: black;
+  position: relative;
+  top: 3.4rem;
+  right: 3rem;
+}
+
+.wheel1, .wheel2, .wheel3 {
+  height: 18px;
+  width: 18px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: rgb(44, 43, 43);
+}
+
+.wheel1 {
+  position: relative;
+  right: 7.5rem;
+  top: 3rem;
+}
+
+.wheel2 {
+  position: relative;
+  top: 3rem;
+  right: 5.7rem;
+}
+
+.wheel3 {
+  position: relative;
+  top: 3rem;
+  right: 13.5rem;
+}
+
+.miniwheel1, .miniwheel2, .miniwheel3 {
+  height: 7px;
+  width: 7px;
+  border-radius: 5px;
+  border: 2px solid white;
+  background-color: rgb(150, 153, 156);
+  position: relative;
+  top: 0.1875rem;
+  left: 0.1875rem;
+  z-index: 1;
+}
+
+/* Add animation to move the van from the right */
+.animated-div {
+  position: relative;
+  animation: move 4s ease-in-out forwards; /* Animation to move van */
+}
+
+@keyframes move {
+  from {
+      transform: translateX(0); /* Starting position */
   }
-  
+  to {
+      transform: translateX(100vw); /* Move van to the right edge of the screen */
+  }
+}
