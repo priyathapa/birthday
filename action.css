@@ -17,7 +17,7 @@
 
 .secondMessage {
     color: #00D1B2;
-
+    animation: typeEffect 6s ease-in;
 }
 
 .envelope {
@@ -25,7 +25,6 @@
     font-size: 28px; 
     display: inline-block;
     animation: move 1s infinite ease-in-out; 
-    transition: transform 0.2s ease-in-out;
 }
 
 .wrapper {
@@ -50,6 +49,8 @@
 @keyframes move {
     0% {
         transform: rotate(-5deg);
+        opacity: 0;
+        transform: translateY(10px);
     }
     50% {
         transform: rotate(0deg);
@@ -59,5 +60,7 @@
     }
     100% {
         transform: rotate(0deg);
+        opacity: 1;
+        transform: translateY(0);
     }
 }
