@@ -14,10 +14,7 @@ html, body {
 /* Position van absolutely (or fixed) off the right side of the screen */
 .van {
   display: flex;
-  position: absolute; /* Or 'fixed' if you want it fixed on the screen */
-  right: -150px; /* Start off-screen to the right */
-  top: 25%; /* Adjust the vertical position */
-  z-index: 10; /* Ensure it stays on top of other elements */
+  position: absolute; 
 }
 
 /* Van styling */
@@ -116,7 +113,7 @@ html, body {
 /* Add animation to move the van from the right */
 .animated-div {
   position: relative;
-  animation: move 4s ease-in-out forwards; /* Animation to move van */
+  animation: move 10s ease-in-out forwards; /* Animation to move van */
 }
 
 @keyframes move {
