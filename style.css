@@ -15,8 +15,7 @@ html, body {
 .van {
   display: flex;
   position: absolute; 
-  right: -150px;
-  top:35%;
+  top:25%;
 }
 
 /* Van styling */
@@ -28,7 +27,6 @@ html, body {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 5px;
   position: relative;
-  left: 9rem;
   top: 0.5rem;
 }
 
@@ -39,7 +37,7 @@ html, body {
   background-color: #4fb7da;
   border-top-right-radius: 5px;
   position: relative;
-  left: 7.3rem;
+  right: 1.7rem;
   top: 1rem;
 }
 
@@ -51,7 +49,7 @@ html, body {
   background-color: #87CEFA;
   position: relative;
   top: 2rem;
-  left: 5.7rem;
+  right: 3.3rem;
 }
 
 .vanStorage {
@@ -60,7 +58,6 @@ html, body {
   border: 2px solid #87CEFA;
   background-color: #87CEFA;
   position: relative;
-  left: 8.8rem;
 }
 
 .vanBottom {
@@ -71,7 +68,7 @@ html, body {
   background-color: black;
   position: relative;
   top: 3.4rem;
-  right: 3rem;
+  right: 12rem;
 }
 
 .wheel1, .wheel2, .wheel3 {
@@ -84,20 +81,20 @@ html, body {
 
 .wheel1 {
   position: relative;
-  right: 7.5rem;
+  right: 20rem;
   top: 3rem;
 }
 
 .wheel2 {
   position: relative;
   top: 3rem;
-  right: 5.7rem;
+  right: 18rem;
 }
 
 .wheel3 {
   position: relative;
   top: 3rem;
-  right: 13.5rem;
+  right: 16.5rem;
 }
 
 .miniwheel1, .miniwheel2, .miniwheel3 {
