@@ -1,23 +1,27 @@
 * {
     background-color: #0A3D62;
-    font-family: "Homemade Apple", cursive;
+    font-family: "Ledger", serif;
+    font-weight: 400;
 }
 
 .message {
     color: #D4AF37;
+    font-size: medium;
+    justify-content: center;
 }
 
 .helloMessage {
+    color: #00D1B2;
     font-family: "Mystery Quest", system-ui;
-    font-style: italic;
     font-weight: 400;
     font-size: xx-large;
     animation: typeEffect 5s ease-in;
 }
 
 .secondMessage {
-    color: #00D1B2;
-    animation: typeEffect 6s ease-in;
+    color: #FF6F61;
+    animation: typeEffect 5s ease-in;
+    font-style: italic;
 }
 
 .envelope {
@@ -30,7 +34,7 @@
 .wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 50%;
+    margin-top: 25%;
 }
 
 /* Keyframe for typing effect */
