@@ -9,7 +9,7 @@
 
 .container{
   position:absolute;
-  left: 10%;
+  left: 5%;
   top:25%;
   opacity: 0; /* Initially hidden */
   visibility: hidden; /* Ensures it's completely hidden */
@@ -19,8 +19,8 @@
 
 .envelope-wrapper > .envelope {
   position: relative;
-  width: 350px;
-  height: 250px;
+  width: 300px;
+  height: 200px;
   background: var(--bg-envelope-color);
   box-shadow: 0 0 8px var(--shadow-color);
 }
@@ -59,7 +59,7 @@
   background:#d3ebdc;
   text-align: center;
   box-shadow: 0 0 5px var(--shadow-color);
-  padding: 15px 10px;
+  padding: 10px 10px;
   z-index: 2;
   transform: translateY(0); /* Initially position the letter inside the envelope */
   opacity: 0; /* Initially hidden */
