@@ -20,7 +20,7 @@
 
 .secondMessage {
     color: #FF6F61;
-    animation: typeEffect 5s ease-in;
+    animation: typeEffect 3s ease-in;
     font-style: italic;
 }
 
