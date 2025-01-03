@@ -9,7 +9,7 @@
 
 .container{
   position:absolute;
-  left: 20%;
+  left: 10%;
   top:25%;
   opacity: 0; /* Initially hidden */
   visibility: hidden; /* Ensures it's completely hidden */
