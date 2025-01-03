@@ -1,115 +1,127 @@
-  .envelope-container{
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    opacity: 0;
-    animation: dudu 6s ease 5s 1 alternate forwards;
-    transform-origin: 0 0;
-    z-index: 1;
+:root{
+  --primary: white;
+  --bg-envelope-color: #f5edd1;
+  --envelope-tab: #ecdeb8;
+  --envelope-cover: #f5d984;
+  --shadow-color: #696969;
+  
 }
-  .envelope {
-    width: 224px;
-    height: 224px;
-    overflow: hidden;
-    position: relative;
-    transition: all ease;
-    animation: tremble 1s infinite;
-    margin: auto;
+
+.container{
+  position:absolute;
+  left: 25%;
+  top:25%;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Ensures it's completely hidden */
+  transition: all 1s ease-in-out, visibility 1s ease-out;
+  animation: revealContainer 1s ease-out 7s forwards;
+}
+
+.envelope-wrapper > .envelope {
+  position: relative;
+  width: 350px;
+  height: 250px;
+  background: var(--bg-envelope-color);
+  box-shadow: 0 0 8px var(--shadow-color);
+}
+
+.envelope-wrapper > .envelope::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  border-top: 130px solid var(--envelope-tab);
+  border-right: 175px solid transparent;
+  border-left: 175px solid transparent;
+  transform-origin: top;
+  transition: all 0.5s ease-in-out;
+  animation: flap 3s ease-out 7s forwards; 
+}
+
+.envelope-wrapper > .envelope::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 0px;
+  height: 0px;
+  border-top: 130px solid transparent;
+  border-right: 175px solid var(--envelope-cover);
+  border-bottom: 120px solid var(--envelope-cover);
+  border-left: 175px solid var(--envelope-cover);
+}
+
+.envelope > .letter {
+  position: absolute;
+  right: 20%;
+  bottom: 0;
+  width: 54%;
+  height: 80%;
+  background:#d3ebdc;
+  text-align: center;
+  box-shadow: 0 0 5px var(--shadow-color);
+  padding: 20px 10px;
+  z-index: 2;
+  transform: translateY(0); /* Initially position the letter inside the envelope */
+  opacity: 0; /* Initially hidden */
+  transition: all 9s ease-in-out;
+  animation: popOut 9s ease-out 9s forwards; /* Animation starts after flap opens */
+}
+
+.envelope > .letter > .text {
+  color:#1252a5;
+  font-family: "Caveat", cursive;
+  font-style: normal;
+  text-align: justify;
+  font-size: 12px;
+  padding-right: 2px;
+  transform: translateY(20px); 
+  animation: revealSlowly 10s ease-in-out forwards;
+}
+
+@keyframes popOut {
+  0% {
+    transform: translateY(0) scale(1); /* Start below the envelope */
   }
-  .envelope--base {
-    top: 100px;
+  100% {
+    transform: translateY(-55%) scale(1.1); /* Move up and slightly enlarge */
+    opacity: 1; /* Fully visible */
     z-index: 2;
-    width: 220px;
-    height: 121px;
-    position: relative;
-    border-radius: 4px;
-    border: 2px solid #00000024;
-    background-color: rgb(254, 168, 182);
   }
-  .envelope__tab {
-    left: 28px;
-    z-index: 1;
-    bottom: 26px;
-    width: 212px;
-    height: 140px;
-    position: absolute;
-    transform: rotateZ(45deg);
-    border-top-left-radius: 30px;
-    background-color: pink;
-    border: 2px solid #00000024;
-  }
-  .envelope__letter {
-    left: 29px;
-    z-index: 3;
-    width: 160px;
-    bottom: 17px;
-    height: 150px;
-    font-size: 10px;
-    font-style: oblique;
-    padding: 8px 12px;
-    border-radius: 8px;
-    position: absolute;
-    box-sizing: border-box;
-    background-size: cover;
-    color: #a59090;
-    border: 1px solid #00000024;
-    transition: all 0.6s linear 0.4s;
-    /* background-image: url("https://i.pinimg.com/564x/bd/27/23/bd2723cccfec31aeb82b41034fdd2933.jpg"); */
-  }
+}
 
-  .envelope__letter {
-    animation: changeProperties 2s forwards; 
-    animation-delay: 2s; 
-  }
-  
-  @keyframes changeProperties {
-    0% {
-      height: 0;
-      color: initial; /* Starting state */
-    }
-    100% {
-      height: 200px;
-      color: #4c4444; /* Final state after 2 seconds */
-    }
-  }
-  
 
-  .envelope__letter:before {
-    content: "";
-    height: 0;
-    width: 6px;
-    right: -34px;
-    bottom: -17px;
-    position: absolute;
-    border-top: 56px solid transparent;
-    border-left: 107px solid pink;
-    border-right: 107px solid pink;
-    border-bottom: 65px solid rgb(255, 174, 187);
+
+@keyframes flap {
+  0% {
+    transform: rotateX(0deg); /* Starts closed (0deg) */
   }
-
-  @keyframes tremble {
-    0% {
-      transform: rotate(-1deg);
-    }
-    50% {
-      transform: rotate(0deg);
-    }
-    75% {
-      transform: rotate(1deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
+  100% {
+    transform: rotateX(180deg); /* Ends fully opened (180deg) */
   }
+}
 
-  @keyframes dudu {
-    0% {
-        opacity: 0;
-    }
+@keyframes revealContainer {
+  0% {
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Hidden initially */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Make it visible */
+  }
+}
 
-    100% {
-        opacity: 1;
-    }
-} 
-  
+@keyframes revealSlowly {
+  0% {
+    opacity: 0; /* Text starts fully transparent */
+    transform: translateY(20px); /* Start below */
+  }
+  50% {
+    opacity: 0.5; /* Halfway opacity */
+    transform: translateY(0px); /* Move to its original position */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0px); /* End at its normal position */
+  }
+}
