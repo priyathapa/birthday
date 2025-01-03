@@ -59,7 +59,7 @@
   background:#d3ebdc;
   text-align: center;
   box-shadow: 0 0 5px var(--shadow-color);
-  padding: 5px 5px;
+  padding: 15px 10px;
   z-index: 2;
   transform: translateY(0); /* Initially position the letter inside the envelope */
   opacity: 0; /* Initially hidden */
