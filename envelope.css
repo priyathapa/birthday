@@ -9,7 +9,7 @@
 
 .container{
   position:absolute;
-  left: 25%;
+  left: 20%;
   top:25%;
   opacity: 0; /* Initially hidden */
   visibility: hidden; /* Ensures it's completely hidden */
@@ -76,6 +76,16 @@
   padding-right: 2px;
   transform: translateY(20px); 
   animation: revealSlowly 10s ease-in-out forwards;
+}
+
+.endNote {
+  position: absolute;
+  left:90px; 
+}
+
+.secondEndNote{
+  position:absolute;
+  left:110px;
 }
 
 @keyframes popOut {
